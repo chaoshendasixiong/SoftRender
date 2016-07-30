@@ -133,6 +133,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_CREATE:
 		init(hWnd);
 		SetClientSize(hWnd, WIDTH, HEIGHT);
+		setSurface();
 		break;
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
@@ -161,7 +162,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		break;
 	case WM_TIMER:
 		printf("timer");
-		random();
+		//random();
+		
 		mypaint(hWnd);
 		break;
 	default:
